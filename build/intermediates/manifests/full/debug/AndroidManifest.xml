@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="jieyun.jjlink.com.beforedemo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="22" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="jieyun.jjlink.com.beforedemo.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="jieyun.jjlink.com.beforedemo.UserInfoActivity"
+            android:label="@string/title_activity_user_info" >
+        </activity>
+        <activity
+            android:name="jieyun.jjlink.com.beforedemo.OnlineInfo"
+            android:label="@string/title_activity_online_info" >
+        </activity>
+        <activity
+            android:name="jieyun.jjlink.com.beforedemo.CredentialsInfo"
+            android:label="@string/title_activity_credentials_info" >
+        </activity>
+        <activity
+            android:name="jieyun.jjlink.com.beforedemo.DetailInfo"
+            android:label="@string/title_activity_detail_info" >
+        </activity>
+        <activity
+            android:name="jieyun.jjlink.com.beforedemo.RechargeInfo"
+            android:label="@string/title_activity_recharge_info" >
+        </activity>
+        <activity
+            android:name="jieyun.jjlink.com.beforedemo.BillInfo"
+            android:label="@string/title_activity_bill_info" >
+        </activity>
+    </application>
+
+</manifest>

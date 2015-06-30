@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">BeforeDemo</string>
+
+    <string name="self_service">自助服务平台</string>
+    <string name="user_info">用户信息</string>
+    <string name="online_info">在线信息</string>
+    <string name="credentials">认证信息</string>
+    <string name="details_info">详单信息</string>
+    <string name="billing_info">账单信息</string>
+    <string name="recharge">充值信息</string>
+    
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_user_info">UserInfo</string>
+    <string name="title_activity_online_info">OnlineInfo</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_credentials_info">CredentialsInfo</string>
+    <string name="title_activity_detail_info">DetailInfo</string>
+    <string name="title_activity_recharge_info">RechargeInfo</string>
+    <string name="title_activity_bill_info">BillInfo</string>
+
+    <!--自助服务-->
+    <string name="fullname">姓名</string>
+    <string name="mobile">电话</string>
+    <string name="bind_mac">Mac地址</string>
+    <string name="service_name">服务名</string>
+    <string name="account">账户类型</string>
+    <string name="username">用户名</string>
+    <string name="ipv4">用户ip地址</string>
+    <string name="area_name">区域位置</string>
+    <string name="area_type">区域类型</string>
+    <string name="acctstarttime">上线时间</string>
+
+
+</resources>
