@@ -29,6 +29,28 @@ public class UserInfoActivity extends AppCompatActivity {
     private static final int BIND_MAC = R.string.bind_mac;
     private static final int SERVICE_NAME = R.string.service_name;
     private static final int ACCOUNT = R.string.account;
+    TextView mUsername;
+    TextView mFullname;
+    TextView mAlias;
+    TextView mCardNo;
+    TextView mMobile;
+    TextView mStatus;
+    TextView mCreateTime;
+    TextView mExpirydate;
+    TextView mBalance;
+    TextView mServiceName;
+    TextView mNextServiceName;
+    String username;
+    String fullname;
+    String alias;
+    String card_no;
+    String mobile;
+    String status;
+    String create_time;
+    String expirydate;
+    Double balance;
+    String service_name;
+    String next_service_name;
     RequestQueue mQueue;
     StringRequest request;
     Gson gson;
@@ -38,7 +60,18 @@ public class UserInfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_user_info);
-        final TextView textView = (TextView) findViewById(R.id.id_user);
+        //final TextView textView = (TextView) findViewById(R.id.id_user);
+        mUsername = (TextView) findViewById(R.id.id_username);
+        mFullname = (TextView) findViewById(R.id.id_fullname);
+        mAlias = (TextView) findViewById(R.id.id_alias);
+        mCardNo = (TextView) findViewById(R.id.id_card_no);
+        mMobile = (TextView) findViewById(R.id.id_mobile);
+        mStatus = (TextView) findViewById(R.id.id_status);
+        mCreateTime = (TextView) findViewById(R.id.id_create_time);
+        mExpirydate = (TextView) findViewById(R.id.id_expirydate);
+        mBalance = (TextView) findViewById(R.id.id_balance);
+        mServiceName = (TextView) findViewById(R.id.id_service_name);
+        mNextServiceName = (TextView) findViewById(R.id.id_next_service_name);
         HandlerThread handlerThread = new HandlerThread("userInfo");
         handlerThread.start();
         Handler handler = new Handler(handlerThread.getLooper());
@@ -49,23 +82,28 @@ public class UserInfoActivity extends AppCompatActivity {
                     gson = new GsonBuilder().serializeNulls().create();
                     String info = StreamTool.doPost(REQUEST_URL, null);
                     System.out.println(info);
-                    UserInfo userInfo=gson.fromJson(info, UserInfo.class);
-                    List<Results> results=userInfo.getResults();
-                    final StringBuffer sb=new StringBuffer();
-                    for(Results r: results){
-                        String username=r.getUsername();
-                        String fullname=r.getFullname();
-                        String alias=r.getAlias()==null?"无":r.getAlias();
-                        String card_no=r.getCertification_no();
-                        String mobile=r.getMobile()==null?"无":r.getMobile();
-                        String status=r.getStatus();
-                        String create_time= ToolUtils.parseTime(r.getCreatetime());
-                        String expirydate=ToolUtils.parseTime(r.getExpirydate()==null?0:r.getExpirydate());
-                        Double balance=r.getBalance()/100.00d;
-                        String service_name=r.getService_name();
-                        String next_service_name=r.getNext_service_name()==null?"未知":r.getNext_service_name();
+                    UserInfo userInfo = gson.fromJson(info, UserInfo.class);
+                    List<Results> results = userInfo.getResults();
+                    //final StringBuffer sb = new StringBuffer();
+                    for (Results r : results) {
+                        username = r.getUsername();
+                        fullname = r.getFullname();
+                        alias = r.getAlias() == null ? "无" : r.getAlias();
+                        card_no = r.getCertification_no();
+                        mobile = r.getMobile() == null ? "无" : r.getMobile();
+                        status = r.getStatus();
+                        create_time = ToolUtils.parseTime(r.getCreatetime());
+                        if (r.getExpirydate() == null) {
+                            /*未查询到有效期*/
+                            expirydate = "无";
+                        } else {
+                            expirydate = ToolUtils.parseTime(r.getExpirydate());
+                        }
+                        balance = r.getBalance() / 100.00d;
+                        service_name = r.getService_name();
+                        next_service_name = r.getNext_service_name() == null ? "未知" : r.getNext_service_name();
 
-                        sb.append("用户名：   ").append(username).append("\n")
+                       /* sb.append("用户名：   ").append(username).append("\n")
                                 .append("姓名：     ").append(fullname).append("\n")
                                 .append("别名：     ").append(alias).append("\n")
                                 .append("证件号：   ").append(card_no).append("\n")
@@ -75,7 +113,7 @@ public class UserInfoActivity extends AppCompatActivity {
                                 .append("有效期：    ").append(expirydate).append("\n")
                                 .append("账户余额：  ").append(balance).append("\n")
                                 .append("本期服务名：").append(service_name).append("\n")
-                                .append("下期服务名：").append(next_service_name).append("\n");
+                                .append("下期服务名：").append(next_service_name).append("\n");*/
 
                     }
 
@@ -83,7 +121,18 @@ public class UserInfoActivity extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            textView.setText(sb.toString());
+                            mUsername.setText(username);
+                            mFullname.setText(fullname);
+                            mAlias.setText(alias);
+                            mCardNo.setText(card_no);
+                            mMobile.setText(mobile);
+                            mStatus.setText(status);
+                            mCreateTime.setText(create_time);
+                            mExpirydate.setText(expirydate);
+                            mBalance.setText(String.valueOf(balance));
+                            mServiceName.setText(service_name);
+                            mNextServiceName.setText(next_service_name);
+                            //textView.setText(sb.toString());
                         }
                     });
 
