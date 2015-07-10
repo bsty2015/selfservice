@@ -3,4 +3,4 @@
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" app:showAsAction="never" />
 </menu>
-<!-- From: file:/home/zlu/Workspace/NJUWLAN/selfservice/src/main/res/menu/global.xml -->
+<!-- From: file:/Users/bsty/androidapps/Androidapps/selfservice/src/main/res/menu/global.xml -->

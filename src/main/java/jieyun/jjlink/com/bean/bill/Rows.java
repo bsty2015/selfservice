@@ -6,13 +6,13 @@ package jieyun.jjlink.com.bean.bill;
 public class Rows {
     private String account_no;
     //初期余额
-    private Integer beginning_banlance;
+    private Long beginning_balance;
     //本期充值金额
-    private Integer recharge_amount;
+    private Long recharge_amount;
     //本期使用金额
-    private Integer costs_amount;
+    private Long costs_amount;
     //期末余额
-    private Integer ending_banlance;
+    private Long ending_balance;
     //创建时间
     private Integer createtime;
     //开始日期
@@ -24,10 +24,10 @@ public class Rows {
     public String toString() {
         return "Rows{" +
                 "account_no='" + account_no + '\'' +
-                ", beginning_banlance=" + beginning_banlance +
+                ", beginning_balance=" + beginning_balance +
                 ", recharge_amount=" + recharge_amount +
                 ", costs_amount=" + costs_amount +
-                ", ending_banlance=" + ending_banlance +
+                ", ending_balance=" + ending_balance +
                 ", createtime=" + createtime +
                 ", startdate=" + startdate +
                 ", enddate=" + enddate +
@@ -42,36 +42,36 @@ public class Rows {
         this.account_no = account_no;
     }
 
-    public Integer getBeginning_banlance() {
-        return beginning_banlance;
+    public Long getBeginning_balance() {
+        return beginning_balance;
     }
 
-    public void setBeginning_banlance(Integer beginning_banlance) {
-        this.beginning_banlance = beginning_banlance;
+    public void setBeginning_balance(Long beginning_balance) {
+        this.beginning_balance = beginning_balance;
     }
 
-    public Integer getRecharge_amount() {
+    public Long getRecharge_amount() {
         return recharge_amount;
     }
 
-    public void setRecharge_amount(Integer recharge_amount) {
+    public void setRecharge_amount(Long recharge_amount) {
         this.recharge_amount = recharge_amount;
     }
 
-    public Integer getCosts_amount() {
+    public Long getCosts_amount() {
         return costs_amount;
     }
 
-    public void setCosts_amount(Integer costs_amount) {
+    public void setCosts_amount(Long costs_amount) {
         this.costs_amount = costs_amount;
     }
 
-    public Integer getEnding_banlance() {
-        return ending_banlance;
+    public Long getEnding_balance() {
+        return ending_balance;
     }
 
-    public void setEnding_banlance(Integer ending_banlance) {
-        this.ending_banlance = ending_banlance;
+    public void setEnding_balance(Long ending_balance) {
+        this.ending_balance = ending_balance;
     }
 
     public Integer getCreatetime() {

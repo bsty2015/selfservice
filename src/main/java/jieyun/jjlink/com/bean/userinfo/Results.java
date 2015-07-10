@@ -15,7 +15,7 @@ public class Results {
     private Integer createtime;
     private Integer expirydate;
     private String status;
-    private Double account_balance;
+    private Long account_balance;
     private Integer pay_type;
 
     @Override
@@ -117,11 +117,11 @@ public class Results {
         this.status = status;
     }
 
-    public Double getBalance() {
+    public Long getBalance() {
         return account_balance;
     }
 
-    public void setBalance(Double balance) {
+    public void setBalance(Long balance) {
         this.account_balance = balance;
     }
 

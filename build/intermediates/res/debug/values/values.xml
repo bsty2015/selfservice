@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/home/zlu/Workspace/NJUWLAN/selfservice/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/Users/bsty/androidapps/Androidapps/selfservice/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -149,11 +149,11 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
-    <!-- From: file:/home/zlu/Workspace/NJUWLAN/selfservice/src/main/res/values/dimens.xml -->
+    <!-- From: file:/Users/bsty/androidapps/Androidapps/selfservice/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/home/zlu/Workspace/NJUWLAN/selfservice/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/Users/bsty/androidapps/Androidapps/selfservice/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <item name="dialog_fixed_height_major" type="dimen">80%</item>
     <item name="dialog_fixed_height_minor" type="dimen">100%</item>
@@ -161,10 +161,10 @@
     <item name="dialog_fixed_width_minor" type="dimen">320dp</item>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
-    <!-- From: file:/home/zlu/Workspace/NJUWLAN/selfservice/src/main/res/values/dimens.xml -->
+    <!-- From: file:/Users/bsty/androidapps/Androidapps/selfservice/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="navigation_drawer_width">100dp</dimen>
-    <!-- From: file:/home/zlu/Workspace/NJUWLAN/selfservice/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/Users/bsty/androidapps/Androidapps/selfservice/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="notification_large_icon_height">64dp</dimen>
     <dimen name="notification_large_icon_width">64dp</dimen>
@@ -184,10 +184,10 @@
     <integer name="abc_max_action_buttons">2</integer>
     <integer name="cancel_button_image_alpha">127</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
-    <!-- From: file:/home/zlu/Workspace/NJUWLAN/selfservice/src/main/res/values/refs.xml -->
+    <!-- From: file:/Users/bsty/androidapps/Androidapps/selfservice/src/main/res/values/refs.xml -->
     <eat-comment/>
     <item name="fragment_item" type="layout">@layout/fragment_item_list</item>
-    <!-- From: file:/home/zlu/Workspace/NJUWLAN/selfservice/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/Users/bsty/androidapps/Androidapps/selfservice/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
@@ -206,7 +206,7 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <!-- From: file:/home/zlu/Workspace/NJUWLAN/selfservice/src/main/res/values/strings.xml -->
+    <!-- From: file:/Users/bsty/androidapps/Androidapps/selfservice/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="account">账户类型</string>
     <string name="acctstarttime">上线时间</string>
@@ -229,10 +229,10 @@
     <string name="recharge">充值信息</string>
     <string name="self_service">自助服务平台</string>
     <string name="service_name">服务名</string>
-    <!-- From: file:/home/zlu/Workspace/NJUWLAN/selfservice/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/Users/bsty/androidapps/Androidapps/selfservice/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <!-- From: file:/home/zlu/Workspace/NJUWLAN/selfservice/src/main/res/values/strings.xml -->
+    <!-- From: file:/Users/bsty/androidapps/Androidapps/selfservice/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="title_activity_bill_info">BillInfo</string>
     <string name="title_activity_credentials_info">CredentialsInfo</string>
@@ -242,18 +242,18 @@
     <string name="title_activity_user_info">UserInfo</string>
     <string name="user_info">用户信息</string>
     <string name="username">用户名</string>
-    <!-- From: file:/home/zlu/Workspace/NJUWLAN/selfservice/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/Users/bsty/androidapps/Androidapps/selfservice/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
-    <!-- From: file:/home/zlu/Workspace/NJUWLAN/selfservice/src/main/res/values/styles.xml -->
+    <!-- From: file:/Users/bsty/androidapps/Androidapps/selfservice/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
     </style>
-    <!-- From: file:/home/zlu/Workspace/NJUWLAN/selfservice/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/Users/bsty/androidapps/Androidapps/selfservice/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>

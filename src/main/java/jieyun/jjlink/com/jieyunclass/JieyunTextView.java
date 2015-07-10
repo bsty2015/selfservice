@@ -11,6 +11,7 @@ public class JieyunTextView extends TextView{
     public JieyunTextView(Context context) {
         super(context);
         setBackgroundColor(Color.WHITE);
+        setPadding(10,0,0,0);
         setTextColor(Color.BLACK);
     }
 }

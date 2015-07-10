@@ -422,13 +422,13 @@ int id action_bar_subtitle 0x7f0c0024
 int id action_bar_title 0x7f0c0023
 int id action_context_bar 0x7f0c0041
 int id action_divider 0x7f0c006c
-int id action_example 0x7f0c0078
+int id action_example 0x7f0c0079
 int id action_menu_divider 0x7f0c0002
 int id action_menu_presenter 0x7f0c0003
 int id action_mode_bar 0x7f0c003d
 int id action_mode_bar_stub 0x7f0c003c
 int id action_mode_close_button 0x7f0c0025
-int id action_settings 0x7f0c0077
+int id action_settings 0x7f0c0078
 int id activity_chooser_view_content 0x7f0c0026
 int id alertTitle 0x7f0c0030
 int id always 0x7f0c0016
@@ -464,7 +464,7 @@ int id id_card_no 0x7f0c0059
 int id id_create_time 0x7f0c005c
 int id id_credentials 0x7f0c0064
 int id id_credentials_info 0x7f0c0050
-int id id_details 0x7f0c0076
+int id id_details 0x7f0c0077
 int id id_details_info 0x7f0c0065
 int id id_expirydate 0x7f0c005d
 int id id_fullname 0x7f0c0057
@@ -475,6 +475,7 @@ int id id_online 0x7f0c0054
 int id id_online_info 0x7f0c0063
 int id id_recharge 0x7f0c0055
 int id id_recharge_info 0x7f0c0067
+int id id_scroll 0x7f0c0076
 int id id_service_name 0x7f0c005f
 int id id_status 0x7f0c005b
 int id id_user_info 0x7f0c0062

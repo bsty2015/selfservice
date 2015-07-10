@@ -33,7 +33,7 @@ import java.util.TimeZone;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
-    private static final String LOGIN_SELF_SERVICE_URL = "http://192.9.1.8:8080/manage/self/auth/login";
+    private static final String LOGIN_SELF_SERVICE_URL = "http://192.9.2.101:8080/manage/self/auth/login";
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
@@ -170,12 +170,13 @@ public class MainActivity extends AppCompatActivity
                             List<NameValuePair> params = new ArrayList<NameValuePair>();
                             //String username = (String) getSpInfo("userInfo", "uname");
                             //String passwd = (String) getSpInfo("userInfo", "pwd");
-                            params.add(new BasicNameValuePair("username", "test"));
-                            params.add(new BasicNameValuePair("password", "test123"));
+                            params.add(new BasicNameValuePair("username", "admin"));
+                            params.add(new BasicNameValuePair("password", "admin"));
                             textContext = StreamTool.doPost(LOGIN_SELF_SERVICE_URL, params);
 
                             String loginInfo = showLoginInfo(textContext);
-                            textView.setText(loginInfo);
+                            
+                            //textView.setText(loginInfo);
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -261,7 +262,7 @@ public class MainActivity extends AppCompatActivity
         System.setProperty("user.timezone", "Asia/Shanghai");
         TimeZone tz = TimeZone.getTimeZone("Asia/Shanghai");
         TimeZone.setDefault(tz);
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         Date date = new Time(time * 1000l);
         return sdf.format(date);
     }

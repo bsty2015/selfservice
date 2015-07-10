@@ -10,7 +10,7 @@ import android.widget.TableRow;
 public class JieyunRow extends TableRow {
     public JieyunRow(Context context) {
         super(context);
-        setPadding(1,1,1,1);
+        //setPadding(10,0,0,0);
         setBackgroundColor(Color.GRAY);
     }
 }

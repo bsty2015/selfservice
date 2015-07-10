@@ -1539,13 +1539,13 @@ containing a value of this type.
         public static final int action_bar_title=0x7f0c0023;
         public static final int action_context_bar=0x7f0c0041;
         public static final int action_divider=0x7f0c006c;
-        public static final int action_example=0x7f0c0078;
+        public static final int action_example=0x7f0c0079;
         public static final int action_menu_divider=0x7f0c0002;
         public static final int action_menu_presenter=0x7f0c0003;
         public static final int action_mode_bar=0x7f0c003d;
         public static final int action_mode_bar_stub=0x7f0c003c;
         public static final int action_mode_close_button=0x7f0c0025;
-        public static final int action_settings=0x7f0c0077;
+        public static final int action_settings=0x7f0c0078;
         public static final int activity_chooser_view_content=0x7f0c0026;
         public static final int alertTitle=0x7f0c0030;
         public static final int always=0x7f0c0016;
@@ -1581,7 +1581,7 @@ containing a value of this type.
         public static final int id_create_time=0x7f0c005c;
         public static final int id_credentials=0x7f0c0064;
         public static final int id_credentials_info=0x7f0c0050;
-        public static final int id_details=0x7f0c0076;
+        public static final int id_details=0x7f0c0077;
         public static final int id_details_info=0x7f0c0065;
         public static final int id_expirydate=0x7f0c005d;
         public static final int id_fullname=0x7f0c0057;
@@ -1592,6 +1592,7 @@ containing a value of this type.
         public static final int id_online_info=0x7f0c0063;
         public static final int id_recharge=0x7f0c0055;
         public static final int id_recharge_info=0x7f0c0067;
+        public static final int id_scroll=0x7f0c0076;
         public static final int id_service_name=0x7f0c005f;
         public static final int id_status=0x7f0c005b;
         public static final int id_user_info=0x7f0c0062;

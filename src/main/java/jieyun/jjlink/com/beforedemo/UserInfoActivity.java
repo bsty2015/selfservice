@@ -19,11 +19,11 @@ import java.util.List;
 
 import jieyun.jjlink.com.bean.userinfo.Results;
 import jieyun.jjlink.com.bean.userinfo.UserInfo;
-import jieyun.jjlink.com.utils.ToolUtils;
+import jieyun.jjlink.com.utils.FormatUtils;
 
 
 public class UserInfoActivity extends AppCompatActivity {
-    private static final String REQUEST_URL = "http://192.9.1.8:8080/manage/self/userinfo/getinfo";
+    private static final String REQUEST_URL = "http://192.9.2.101:8080/manage/self/userinfo/getinfo";
     private static final int FULL_NAME = R.string.fullname;
     private static final int MOBILE = R.string.mobile;
     private static final int BIND_MAC = R.string.bind_mac;
@@ -92,14 +92,14 @@ public class UserInfoActivity extends AppCompatActivity {
                         card_no = r.getCertification_no();
                         mobile = r.getMobile() == null ? "无" : r.getMobile();
                         status = r.getStatus();
-                        create_time = ToolUtils.parseTime(r.getCreatetime());
+                        create_time = FormatUtils.parseTime(r.getCreatetime(), "yyyy-HH-dd");
                         if (r.getExpirydate() == null) {
                             /*未查询到有效期*/
                             expirydate = "无";
                         } else {
-                            expirydate = ToolUtils.parseTime(r.getExpirydate());
+                            expirydate = FormatUtils.parseTime(r.getExpirydate(), "yyyy-MM-dd");
                         }
-                        balance = r.getBalance() / 100.00d;
+                        balance = r.getBalance() / 1000.00d;
                         service_name = r.getService_name();
                         next_service_name = r.getNext_service_name() == null ? "未知" : r.getNext_service_name();
 
@@ -156,7 +156,7 @@ public class UserInfoActivity extends AppCompatActivity {
             String service_name = results_msg.getString("service_name");
             String next_service_name = results_msg.getString("next_service_name");
             net.sf.json.JSONObject account = jsonObject.getJSONObject("account");
-            double balance = account.getLong("balance") / 100.00d;
+            double balance = account.getLong("balance") / 1000.00d;
             int pay_type = account.getInt("pay_type");
             int account_type = account.getInt("account_type");
             String payType = "";
@@ -212,7 +212,6 @@ public class UserInfoActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 }

@@ -23,11 +23,11 @@ import jieyun.jjlink.com.bean.recharge.Recharge;
 import jieyun.jjlink.com.bean.recharge.Rows;
 import jieyun.jjlink.com.jieyunclass.JieyunRow;
 import jieyun.jjlink.com.jieyunclass.JieyunTextView;
-import jieyun.jjlink.com.utils.ToolUtils;
+import jieyun.jjlink.com.utils.FormatUtils;
 
 
 public class RechargeInfo extends AppCompatActivity {
-    private static final String REQUEST_URL = "http://192.9.1.8:8080/manage/self/recharge/getlist";
+    private static final String REQUEST_URL = "http://192.9.2.101:8080/manage/self/recharge/getlist";
     ScrollView scrollView;
     LinearLayout linearLayout;
     TableLayout tab;
@@ -54,7 +54,7 @@ public class RechargeInfo extends AppCompatActivity {
                     List<Rows> rows = recharge.getRows();
                     tab = new TableLayout(getApplicationContext());
                     tab.setStretchAllColumns(true);
-                    scrollView=new ScrollView(getApplicationContext());
+                    scrollView = new ScrollView(getApplicationContext());
                     scrollView.addView(tab);
                     for (Rows r : rows) {
 
@@ -62,7 +62,7 @@ public class RechargeInfo extends AppCompatActivity {
 
                       /*  sb.append("账号：").append(r.getAccount_no()).append("\n")
                                 .append("充值金额：").append(r.getAmount() / 100.00d).append("\n")
-                                .append("充值时间：").append(ToolUtils.parseTime(r.getOper_time())).append("\n")
+                                .append("充值时间：").append(FormatUtils.parseTime(r.getOper_time())).append("\n")
                                 .append("备注：    ").append(r.getRemark()).append("\n\n");*/
                     }
                     runOnUiThread(new Runnable() {
@@ -109,46 +109,47 @@ public class RechargeInfo extends AppCompatActivity {
      * @param r
      */
     private void createTabLayout(Context context, TableLayout tab, Rows r) {
-        TableRow row_1 = new JieyunRow(context);
-        TableRow row_2 = new JieyunRow(context);
-        TableRow row_3 = new JieyunRow(context);
-        TableRow row_4 = new JieyunRow(context);
+        TableRow row_accountno = new JieyunRow(context);
+        TableRow row_amount = new JieyunRow(context);
+        TableRow row_opertime = new JieyunRow(context);
+        TableRow row_mark = new JieyunRow(context);
         TableRow row_blank = new JieyunRow(context);
-        TextView col_1_1 = new JieyunTextView(context);
-        TextView col_1_2 = new JieyunTextView(context);
-        TextView col_2_1 = new JieyunTextView(context);
-        TextView col_2_2 = new JieyunTextView(context);
-        TextView col_3_1 = new JieyunTextView(context);
-        TextView col_3_2 = new JieyunTextView(context);
-        TextView col_4_1 = new JieyunTextView(context);
-        TextView col_4_2 = new JieyunTextView(context);
-        TextView col_blank_1= new JieyunTextView(context);
-        TextView col_blank_2= new JieyunTextView(context);
-        col_1_1.setText("账号");
-        col_1_2.setText(r.getAccount_no());
-        col_2_1.setText("充值金额");
-        col_2_2.setText(String.valueOf(r.getAmount() / 100.00d));
-        col_3_1.setText("充值时间");
-        col_3_2.setText(ToolUtils.parseTime(r.getOper_time()));
-        col_4_1.setText("备注");
-        col_4_2.setText(r.getRemark());
-        col_blank_1.setText("");
-        col_blank_1.setBackgroundColor(255);
-        col_blank_2.setText("");
-        row_1.addView(col_1_1);
-        row_1.addView(col_1_2);
-        row_2.addView(col_2_1);
-        row_2.addView(col_2_2);
-        row_3.addView(col_3_1);
-        row_3.addView(col_3_2);
-        row_4.addView(col_4_1);
-        row_4.addView(col_4_2);
-        row_blank.addView(col_blank_1);
-        row_blank.addView(col_blank_2);
-        tab.addView(row_1);
-        tab.addView(row_2);
-        tab.addView(row_3);
-        tab.addView(row_4);
+        TextView row_account_title = new JieyunTextView(context);
+        TextView row_account_text = new JieyunTextView(context);
+        TextView row_amount_title = new JieyunTextView(context);
+        TextView row_amount_text = new JieyunTextView(context);
+        TextView row_opertime_title = new JieyunTextView(context);
+        TextView row_opertime_text = new JieyunTextView(context);
+        TextView row_mark_title = new JieyunTextView(context);
+        TextView row_mark_text = new JieyunTextView(context);
+        TextView row_blank_title = new JieyunTextView(context);
+        TextView row_blank_text = new JieyunTextView(context);
+        row_account_title.setText("账号");
+        row_account_text.setText(r.getAccount_no());
+        row_amount_title.setText("充值金额");
+        row_amount_text.setText(String.valueOf(r.getAmount() / 1000.00d));
+        row_opertime_title.setText("充值时间");
+        row_opertime_text.setText(FormatUtils.parseTime(r.getOper_time()));
+        row_mark_title.setText("备注");
+        row_mark_text.setText(r.getRemark());
+        row_blank_title.setText("");
+        row_blank_title.setBackgroundColor(255);
+        row_blank_text.setBackgroundColor(255);
+        row_blank_text.setText("");
+        row_accountno.addView(row_account_title);
+        row_accountno.addView(row_account_text);
+        row_amount.addView(row_amount_title);
+        row_amount.addView(row_amount_text);
+        row_opertime.addView(row_opertime_title);
+        row_opertime.addView(row_opertime_text);
+        row_mark.addView(row_mark_title);
+        row_mark.addView(row_mark_text);
+        row_blank.addView(row_blank_title);
+        row_blank.addView(row_blank_text);
+        tab.addView(row_accountno);
+        tab.addView(row_amount);
+        tab.addView(row_opertime);
+        tab.addView(row_mark);
         tab.addView(row_blank);
     }
 
@@ -156,6 +157,7 @@ public class RechargeInfo extends AppCompatActivity {
         public JieyunTab(Context context) {
             super(context);
         }
+
         public JieyunTab(Context context, AttributeSet attrs) {
             super(context, attrs);
         }
